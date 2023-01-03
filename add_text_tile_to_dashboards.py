@@ -1,3 +1,12 @@
+'''
+There are some hard-coded values in this script which will need to be updated prior to running.
+- ADD_TITLE_HERE
+- ADD MORE HERE IF NEEDED
+- ####
+
+Recommend using Ctrl + F to find these in the script and update them.
+'''
+
 from __future__ import absolute_import
 
 import click
@@ -82,7 +91,7 @@ def add_legal_tile(prod: bool, dryrun: bool) -> None:
                 is_dryrun=dryrun
             )
     else:
-        dashboard_list_initial = ['3629', '3631']
+        dashboard_list_initial = ['####', '####']
         add_legal_text_tile(
             dashboard_num=dashboard_num,
             dashboard_list_initial=dashboard_list_initial,
@@ -93,7 +102,7 @@ def add_legal_tile(prod: bool, dryrun: bool) -> None:
 @cli.command()
 def get_dashboard_list() -> None:
     # look id that returns a list of dashboards that meet criteria
-    look_id = '8960'
+    look_id = '####'
 
     click.echo(_get_dashboard_list(look_id))
 
